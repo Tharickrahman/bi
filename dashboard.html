@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Stackly Bank</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <div class="logo">SB</div>
+                <h1>Stackly Bank</h1>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item dropdown">
+                    <a href="#" class="nav-link">Home <span class="dropdown-arrow">▼</span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="home.html">Home</a></li>
+                        <li><a href="index.html">Home1</a></li>
+                        <li><a href="home2.html">Home2</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+                <li class="nav-item"><a href="service.html" class="nav-link">Service</a></li>
+                <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+                <li class="nav-item"><a href="dashboard.html" class="nav-link active">Dashboard</a></li>
+                <li class="nav-item"><a href="signin.html" class="nav-link signin-btn">Sign In</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Dashboard Header -->
+    <section class="dashboard-header">
+        <div class="container">
+            <h1>Banking Dashboard</h1>
+            <p>Welcome back! Here's your financial overview</p>
+        </div>
+    </section>
+
+    <!-- Dashboard Content -->
+    <section class="dashboard-content">
+        <div class="container">
+            <!-- Stats Cards -->
+            <div class="dashboard-stats">
+                <div class="stat-card animate-fade-in">
+                    <div class="stat-icon">💰</div>
+                    <div class="stat-info">
+                        <h3>Total Balance</h3>
+                        <p class="stat-value">$125,450.00</p>
+                        <span class="stat-change positive">+2.5% from last month</span>
+                    </div>
+                </div>
+                <div class="stat-card animate-fade-in" style="animation-delay: 0.1s">
+                    <div class="stat-icon">💳</div>
+                    <div class="stat-info">
+                        <h3>Monthly Spending</h3>
+                        <p class="stat-value">$8,320.00</p>
+                        <span class="stat-change">-5.2% from last month</span>
+                    </div>
+                </div>
+                <div class="stat-card animate-fade-in" style="animation-delay: 0.2s">
+                    <div class="stat-icon">📈</div>
+                    <div class="stat-info">
+                        <h3>Investments</h3>
+                        <p class="stat-value">$45,680.00</p>
+                        <span class="stat-change positive">+8.1% from last month</span>
+                    </div>
+                </div>
+                <div class="stat-card animate-fade-in" style="animation-delay: 0.3s">
+                    <div class="stat-icon">🏦</div>
+                    <div class="stat-info">
+                        <h3>Savings</h3>
+                        <p class="stat-value">$32,500.00</p>
+                        <span class="stat-change positive">+3.7% from last month</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Charts Row -->
+            <div class="charts-row">
+                <div class="chart-container animate-slide-up">
+                    <h3>Monthly Transaction Overview</h3>
+                    <canvas id="lineChart"></canvas>
+                </div>
+                <div class="chart-container animate-slide-up" style="animation-delay: 0.2s">
+                    <h3>Expense Categories</h3>
+                    <canvas id="pieChart"></canvas>
+                </div>
+            </div>
+
+            <!-- Additional Charts -->
+            <div class="charts-row">
+                <div class="chart-container animate-slide-up" style="animation-delay: 0.3s">
+                    <h3>Account Balance Trend</h3>
+                    <canvas id="barChart"></canvas>
+                </div>
+                <div class="chart-container animate-slide-up" style="animation-delay: 0.4s">
+                    <h3>Income vs Expenses</h3>
+                    <canvas id="doughnutChart"></canvas>
+                </div>
+            </div>
+
+            <!-- Recent Transactions -->
+            <div class="transactions-section animate-fade-in" style="animation-delay: 0.5s">
+                <h2>Recent Transactions</h2>
+                <div class="transactions-table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Date</th>
+                                <th>Description</th>
+                                <th>Category</th>
+                                <th>Amount</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Dec 15, 2024</td>
+                                <td>Grocery Store Purchase</td>
+                                <td>Food & Dining</td>
+                                <td class="amount-negative">-$125.50</td>
+                                <td><span class="status-badge completed">Completed</span></td>
+                            </tr>
+                            <tr>
+                                <td>Dec 14, 2024</td>
+                                <td>Salary Deposit</td>
+                                <td>Income</td>
+                                <td class="amount-positive">+$5,000.00</td>
+                                <td><span class="status-badge completed">Completed</span></td>
+                            </tr>
+                            <tr>
+                                <td>Dec 13, 2024</td>
+                                <td>Electric Bill Payment</td>
+                                <td>Utilities</td>
+                                <td class="amount-negative">-$85.30</td>
+                                <td><span class="status-badge completed">Completed</span></td>
+                            </tr>
+                            <tr>
+                                <td>Dec 12, 2024</td>
+                                <td>Restaurant Dinner</td>
+                                <td>Food & Dining</td>
+                                <td class="amount-negative">-$67.20</td>
+                                <td><span class="status-badge completed">Completed</span></td>
+                            </tr>
+                            <tr>
+                                <td>Dec 11, 2024</td>
+                                <td>Investment Return</td>
+                                <td>Investment</td>
+                                <td class="amount-positive">+$320.00</td>
+                                <td><span class="status-badge completed">Completed</span></td>
+                            </tr>
+                            <tr>
+                                <td>Dec 10, 2024</td>
+                                <td>Online Shopping</td>
+                                <td>Shopping</td>
+                                <td class="amount-negative">-$245.99</td>
+                                <td><span class="status-badge pending">Pending</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Account Summary -->
+            <div class="account-summary animate-fade-in" style="animation-delay: 0.6s">
+                <h2>Account Summary</h2>
+                <div class="summary-grid">
+                    <div class="summary-card">
+                        <h4>Checking Account</h4>
+                        <p class="account-number">****1234</p>
+                        <p class="account-balance">$45,230.00</p>
+                        <a href="#" class="account-link">View Details →</a>
+                    </div>
+                    <div class="summary-card">
+                        <h4>Savings Account</h4>
+                        <p class="account-number">****5678</p>
+                        <p class="account-balance">$32,500.00</p>
+                        <a href="#" class="account-link">View Details →</a>
+                    </div>
+                    <div class="summary-card">
+                        <h4>Investment Account</h4>
+                        <p class="account-number">****9012</p>
+                        <p class="account-balance">$45,680.00</p>
+                        <a href="#" class="account-link">View Details →</a>
+                    </div>
+                    <div class="summary-card">
+                        <h4>Credit Card</h4>
+                        <p class="account-number">****3456</p>
+                        <p class="account-balance">-$2,250.00</p>
+                        <a href="#" class="account-link">View Details →</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Quick Actions -->
+            <div class="quick-actions animate-fade-in" style="animation-delay: 0.7s">
+                <h2>Quick Actions</h2>
+                <div class="actions-grid">
+                    <button class="action-btn">
+                        <span class="action-icon">💸</span>
+                        <span>Transfer Money</span>
+                    </button>
+                    <button class="action-btn">
+                        <span class="action-icon">📤</span>
+                        <span>Pay Bills</span>
+                    </button>
+                    <button class="action-btn">
+                        <span class="action-icon">📥</span>
+                        <span>Deposit Check</span>
+                    </button>
+                    <button class="action-btn">
+                        <span class="action-icon">💳</span>
+                        <span>Manage Cards</span>
+                    </button>
+                    <button class="action-btn">
+                        <span class="action-icon">📊</span>
+                        <span>View Reports</span>
+                    </button>
+                    <button class="action-btn">
+                        <span class="action-icon">⚙️</span>
+                        <span>Settings</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section footer-logo-section">
+                    <div class="footer-logo">
+                        <div class="logo">SB</div>
+                        <div class="footer-logo-text">Stackly Bank</div>
+                    </div>
+                    <p>Your trusted banking partner since 2020. We're committed to providing exceptional financial services.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="service.html">Services</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="dashboard.html">Dashboard</a></li>
+                        <li><a href="signin.html">Sign In</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <p>Email: info@stacklybank.com</p>
+                    <p>Phone: 1-800-STACKLY</p>
+                    <p>Address: 123 Banking Street, Financial District</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Stackly Bank. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="dashboard.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign In - Stackly Bank</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <div class="logo">SB</div>
+                <h1>Stackly Bank</h1>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item dropdown">
+                    <a href="#" class="nav-link">Home <span class="dropdown-arrow">▼</span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="home.html">Home</a></li>
+                        <li><a href="index.html">Home1</a></li>
+                        <li><a href="home2.html">Home2</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+                <li class="nav-item"><a href="service.html" class="nav-link">Service</a></li>
+                <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+                <li class="nav-item"><a href="dashboard.html" class="nav-link">Dashboard</a></li>
+                <li class="nav-item"><a href="signin.html" class="nav-link signin-btn">Sign In</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Sign In Section -->
+    <section class="signin-section">
+        <div class="container">
+            <div class="signin-wrapper">
+                <div class="signin-card">
+                    <h2>Welcome Back</h2>
+                    <p>Sign in to access your Stackly Bank account</p>
+                    
+                    <form class="signin-form" id="signinForm">
+                        <div class="form-group">
+                            <label for="username">Username or Account Number</label>
+                            <input type="text" id="username" name="username" required placeholder="Enter your username">
+                        </div>
+                        <div class="form-group">
+                            <label for="password">Password</label>
+                            <input type="password" id="password" name="password" required placeholder="Enter your password">
+                        </div>
+                        <div class="form-options">
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="remember">
+                                <span>Remember me</span>
+                            </label>
+                            <a href="#" class="forgot-password">Forgot Password?</a>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-block">Sign In</button>
+                    </form>
+
+                    <div class="signin-divider">
+                        <span>or</span>
+                    </div>
+
+                    <div class="signin-options">
+                        <button class="btn btn-secondary btn-block">
+                            <span>🔐</span> Sign in with Secure ID
+                        </button>
+                        <button class="btn btn-secondary btn-block">
+                            <span>📱</span> Sign in with Mobile App
+                        </button>
+                    </div>
+
+                    <div class="signin-footer">
+                        <p>Don't have an account? <a href="#" class="register-link">Open an Account</a></p>
+                        <p><a href="contact.html" class="help-link">Need Help?</a></p>
+                    </div>
+                </div>
+
+                <div class="signin-info">
+                    <h3>Secure Online Banking</h3>
+                    <div class="security-features">
+                        <div class="security-item">
+                            <div class="security-icon">🔒</div>
+                            <div>
+                                <h4>256-bit SSL Encryption</h4>
+                                <p>Your data is protected with bank-level security</p>
+                            </div>
+                        </div>
+                        <div class="security-item">
+                            <div class="security-icon">🛡️</div>
+                            <div>
+                                <h4>Multi-Factor Authentication</h4>
+                                <p>Additional security layers to protect your account</p>
+                            </div>
+                        </div>
+                        <div class="security-item">
+                            <div class="security-icon">👁️</div>
+                            <div>
+                                <h4>24/7 Account Monitoring</h4>
+                                <p>Real-time fraud detection and alerts</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="quick-links">
+                        <h4>Quick Links</h4>
+                        <ul>
+                            <li><a href="service.html">View Our Services</a></li>
+                            <li><a href="contact.html">Contact Support</a></li>
+                            <li><a href="about.html">About Stackly Bank</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section footer-logo-section">
+                    <div class="footer-logo">
+                        <div class="logo">SB</div>
+                        <div class="footer-logo-text">Stackly Bank</div>
+                    </div>
+                    <p>Your trusted banking partner since 2020. We're committed to providing exceptional financial services.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="service.html">Services</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="dashboard.html">Dashboard</a></li>
+                        <li><a href="signin.html">Sign In</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <p>Email: info@stacklybank.com</p>
+                    <p>Phone: 1-800-STACKLY</p>
+                    <p>Address: 123 Banking Street, Financial District</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Stackly Bank. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
